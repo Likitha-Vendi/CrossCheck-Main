@@ -88,3 +88,11 @@
 .toolbar .search input::placeholder{font-size:13px;color:#7b8798;letter-spacing:0;text-transform:none;}
 .auth-panel input::placeholder{font-size:13px;color:#8a96a8;}
 @media(max-width:680px){.demo-request-form{grid-template-columns:1fr;max-width:none}.demo-request-form .demo-input,.demo-request-form .demo-submit{height:46px;min-height:46px}}
+
+/* Candidate toolbar and signed-in role label refinements */
+.toolbar .filter{min-width:170px;}
+.toolbar .filter select{font-size:12px;padding-top:10px;padding-bottom:10px;padding-right:30px;}
+.toolbar .search input{font-size:13px;}
+.toolbar .search input::placeholder{font-size:13px;color:#7b8798;letter-spacing:0;text-transform:none;}
+.user-chip{border:0;background:transparent;cursor:pointer;}
+.user-chip b{font-size:13px;font-weight:700;white-space:nowrap;}

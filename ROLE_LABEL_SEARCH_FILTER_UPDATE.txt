@@ -1,0 +1,6 @@
+CrossCheck UI update
+
+- Candidate search placeholder changed to: Search By Name, Email, Role Or Skill.
+- Risk filter dropdown text and control size reduced slightly.
+- Signed-in account label in the top-right now displays only the role: Admin, HR, or Recruiter.
+- Existing frontend, backend, mail service, candidate, verification, and reporting functionality remains unchanged.
