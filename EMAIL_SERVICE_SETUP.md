@@ -20,11 +20,8 @@ Set these environment variables before starting the backend:
 ### Windows PowerShell
 
 ```powershell
-$env:CROSSCHECK_MAIL_ENABLED="true"
-$env:MAIL_USERNAME="yourgmail@gmail.com"
-$env:MAIL_PASSWORD="your-16-character-google-app-password"
-$env:CROSSCHECK_MAIL_FROM="yourgmail@gmail.com"
-mvn spring-boot:run
+
+
 ```
 
 ### Windows Command Prompt

@@ -58,3 +58,23 @@
 .candidate-form-sections a{padding:9px 12px;border-radius:9px;background:#fff;border:1px solid #d9e6f4;color:#24476d;font-size:12px;font-weight:700;text-decoration:none}
 #candidate-information,#employment-verification,#education-verification,#offer-letter-verification,#identity-verification{scroll-margin-top:88px}
 @media(max-width:780px){.candidate-form-sections{position:static}.candidate-form-sections a{flex:1 1 46%;text-align:center}}
+
+.form-message{margin:12px 0;padding:11px 13px;border-radius:10px;font-weight:600;font-size:.92rem}.form-message.error{background:#fff1f2;color:#b42318;border:1px solid #fecdd3}.form-message.success{background:#ecfdf3;color:#067647;border:1px solid #abefc6}.verification-warning{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:#fff8e6;color:#8a5a00;border:1px solid #f7d78b}.verify-actions button:disabled{opacity:.5;cursor:not-allowed}
+
+.document-actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.65rem}.document-actions .btn{padding:.5rem .65rem;font-size:.78rem}.doc-grid article{min-width:0}
+
+/* Landing navigation and company contact details */
+.landing-nav nav{font-size:15px;font-weight:600;gap:34px}
+.landing-nav nav a{padding:10px 2px;transition:color .2s ease}
+.landing-nav nav a:hover{color:var(--blue)}
+.contact-intro{max-width:620px}
+.company-contact-details{display:grid;gap:14px;margin-top:24px}
+.company-contact-details>div{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--line);border-radius:10px;background:#f8fbff}
+.contact-icon{width:40px;height:40px;flex:0 0 40px;border-radius:10px;display:grid;place-items:center;background:#e8f3ff;color:var(--blue)}
+.company-contact-details p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+.company-contact-details strong{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.company-contact-details a{color:var(--blue);font-weight:700}
+.footer-company-details{display:grid;gap:4px;max-width:560px;text-align:center;font-size:12px;color:#d7e5f6}
+.footer-company-details a{color:#fff;font-weight:700}
+@media(max-width:900px){.landing-nav nav{font-size:14px;gap:18px}.contact{grid-template-columns:1fr}.contact-intro{max-width:none}footer{gap:18px;flex-wrap:wrap}.footer-company-details{order:3;width:100%;max-width:none}}
+@media(max-width:680px){.landing-nav{height:auto;min-height:76px;padding:12px 4%;flex-wrap:wrap;gap:12px}.landing-nav nav{order:3;width:100%;justify-content:center;overflow-x:auto;font-size:14px;gap:20px}.landing-nav>div{margin-left:auto}.contact form{grid-template-columns:1fr}}

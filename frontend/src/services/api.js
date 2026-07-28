@@ -3,7 +3,19 @@ export async function request(path, options={}) {
   const token = localStorage.getItem('crosscheck_token');
   const headers = {...(options.body instanceof FormData ? {} : {'Content-Type':'application/json'}), ...(token?{Authorization:`Bearer ${token}`}:{}) , ...(options.headers||{})};
   const res = await fetch(`${API}${path}`, {...options, headers});
-  if (!res.ok) { const text = await res.text(); throw new Error(text || `Request failed (${res.status})`); }
+  if (!res.ok) {
+    const text = await res.text();
+    let message = `Request failed (${res.status})`;
+    if (text) {
+      try {
+        const payload = JSON.parse(text);
+        message = payload.message || payload.error || payload.detail || message;
+      } catch {
+        message = text;
+      }
+    }
+    throw new Error(message);
+  }
   if (res.status===204) return null;
   const type=res.headers.get('content-type')||'';
   return type.includes('application/json')?res.json():res.blob();
@@ -24,6 +36,8 @@ export const api = {
   hire: id=>request(`/candidates/${id}/hire`,{method:'PUT'}),
   verifyOffer: (id,body)=>request(`/candidates/${id}/offer-verification`,{method:'PUT',body:JSON.stringify(body)}),
   upload: (id,type,file)=>{const f=new FormData();f.append('file',file);f.append('type',type);return request(`/candidates/${id}/documents`,{method:'POST',body:f});},
+  verifyDocument: (candidateId,documentId,status)=>request(`/candidates/${candidateId}/documents/${documentId}/verification`,{method:'PUT',body:JSON.stringify({status})}),
+  documentUrl: (candidateId,documentId)=>`${API}/candidates/${candidateId}/documents/${documentId}/content`,
   report: id=>request(`/reports/candidate/${id}`),
   notifications: ()=>request('/notifications'),
   audits: ()=>request('/audit-logs'),

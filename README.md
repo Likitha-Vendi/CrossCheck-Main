@@ -72,3 +72,16 @@ The Add/Edit Candidate page now captures Aadhaar, PAN and passport numbers plus 
 ## Email notifications
 
 The backend includes SMTP email support for registration, candidate, verification, offer-letter, hiring and document updates. See `EMAIL_SERVICE_SETUP.md` for Gmail App Password and environment-variable setup.
+
+
+## Document verification update
+- Numeric candidate fields can be cleared completely and no longer force a visible zero.
+- Uploaded documents are stored both in the configured upload directory and in the database for reliable retrieval.
+- Each document remains Pending until HR/Admin marks it Verified or Rejected.
+- Hiring trust points are awarded only for verified employment, education, identity, offer-letter, and required document checks.
+
+## Company Contact
+
+**Address:** GoSpaze - Building No- 1314, 1st, 3rd & 4th Floor, Paramahansa Yogananda Rd, above Imperial Restaurant, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560008
+
+**For Enquiry:** HR@cross-check.in
