@@ -111,11 +111,11 @@ export default function Landing() {
             </div>
           </div>
         </div>
-        <form onSubmit={(event) => { event.preventDefault(); alert('Demo request captured successfully.'); }}>
-          <input required placeholder="Your Name" />
-          <input required type="email" placeholder="Work Email" />
-          <input required placeholder="Company" />
-          <button className="btn">Submit Request</button>
+        <form className="demo-request-form" onSubmit={(event) => { event.preventDefault(); alert('Demo request captured successfully.'); }}>
+          <input required className="demo-input" placeholder="Your Name" />
+          <input required className="demo-input" type="email" placeholder="Work Email" />
+          <input required className="demo-input" placeholder="Company" />
+          <button className="btn demo-submit">Submit Request</button>
         </form>
       </section>
 
