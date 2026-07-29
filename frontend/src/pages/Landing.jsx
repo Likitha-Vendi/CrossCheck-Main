@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import Logo from '../components/Logo';
 
-const COMPANY_ADDRESS = 'GoSpaze - Building No- 1314, 1st, 3rd & 4th Floor, Paramahansa Yogananda Rd, above Imperial Restaurant, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560008';
+const COMPANY_ADDRESS = 'GoSpaze - Building No- 1314, 1st, 3rd & 4th Floor, Paramahansa Yogananda Rd, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560008';
 const ENQUIRY_EMAIL = 'HR@cross-check.in';
 
 const features = [

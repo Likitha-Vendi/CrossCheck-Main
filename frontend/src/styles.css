@@ -74,7 +74,7 @@
 .company-contact-details p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 .company-contact-details strong{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
 .company-contact-details a{color:var(--blue);font-weight:700}
-.footer-company-details{display:grid;gap:4px;max-width:560px;text-align:center;font-size:12px;color:#d7e5f6}
+.footer-company-details{display:grid;gap:3px;max-width:560px;text-align:center;font-size:10px;line-height:1.4;color:#d7e5f6}
 .footer-company-details a{color:#fff;font-weight:700}
 @media(max-width:900px){.landing-nav nav{font-size:14px;gap:18px}.contact{grid-template-columns:1fr}.contact-intro{max-width:none}footer{gap:18px;flex-wrap:wrap}.footer-company-details{order:3;width:100%;max-width:none}}
 @media(max-width:680px){.landing-nav{height:auto;min-height:76px;padding:12px 4%;flex-wrap:wrap;gap:12px}.landing-nav nav{order:3;width:100%;justify-content:center;overflow-x:auto;font-size:14px;gap:20px}.landing-nav>div{margin-left:auto}.contact form{grid-template-columns:1fr}}
@@ -365,3 +365,6 @@
     padding: 16px;
   }
 }
+
+footer>span:last-child{font-size:10px;line-height:1.4;text-align:right;color:#d7e5f6}
+@media(max-width:900px){footer>span:last-child{width:100%;text-align:center;font-size:9px}.footer-company-details{font-size:9px}}
