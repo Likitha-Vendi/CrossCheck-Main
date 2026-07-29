@@ -1,8 +1,0 @@
-CrossCheck UI deployment fixes
-
-1. Contact/demo form fields now use compact fixed heights on desktop and mobile.
-2. Submit Request button now matches the input height.
-3. Login email and password fields are blank by default.
-4. Browser autofill is discouraged on the login form.
-5. Candidate search placeholder uses smaller sentence-case text.
-6. Existing frontend and backend functionality is unchanged.

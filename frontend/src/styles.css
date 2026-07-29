@@ -335,3 +335,33 @@
     justify-self:end;
   }
 }
+
+/* Mobile candidate profile overflow fix */
+.info-grid,
+.info-grid > div {
+  min-width: 0;
+}
+
+.info-grid > div b,
+.info-grid > div strong,
+.info-grid > div span {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+@media (max-width: 520px) {
+  .details-panel .info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .details-panel .info-grid > div {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
+  }
+}
