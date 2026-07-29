@@ -373,3 +373,40 @@ footer>span:last-child{font-size:10px;line-height:1.4;text-align:right;color:#d7
 .address-link:hover,.address-link:focus-visible{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
 .footer-address-link:hover,.footer-address-link:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .company-contact-details p a{display:block;margin-top:3px}
+
+/* Mobile footer alignment: center the complete CrossCheck brand block */
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer > .logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  footer > .logo > span:last-child {
+    text-align: left;
+  }
+
+  .footer-company-details {
+    order: 2;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+  }
+
+  footer > span:last-child {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+}
