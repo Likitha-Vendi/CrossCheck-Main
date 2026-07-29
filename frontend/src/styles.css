@@ -368,3 +368,8 @@
 
 footer>span:last-child{font-size:10px;line-height:1.4;text-align:right;color:#d7e5f6}
 @media(max-width:900px){footer>span:last-child{width:100%;text-align:center;font-size:9px}.footer-company-details{font-size:9px}}
+
+.address-link,.footer-address-link{color:inherit;text-decoration:none;cursor:pointer;transition:color .2s ease,text-decoration-color .2s ease}
+.address-link:hover,.address-link:focus-visible{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.footer-address-link:hover,.footer-address-link:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.company-contact-details p a{display:block;margin-top:3px}

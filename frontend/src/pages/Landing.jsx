@@ -18,6 +18,7 @@ import Logo from '../components/Logo';
 
 const COMPANY_ADDRESS = 'GoSpaze - Building No- 1314, 1st, 3rd & 4th Floor, Paramahansa Yogananda Rd, Eshwara Layout, Indiranagar, Bengaluru, Karnataka 560008';
 const ENQUIRY_EMAIL = 'HR@cross-check.in';
+const MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY_ADDRESS)}`;
 
 const features = [
   [Users, 'Offer Intelligence', 'Detect Multiple Active Offers And Track Offer History.'],
@@ -120,7 +121,7 @@ export default function Landing() {
           <div className="company-contact-details">
             <div>
               <span className="contact-icon"><MapPin size={20} /></span>
-              <p><strong>Company Address</strong>{COMPANY_ADDRESS}</p>
+              <p><strong>Company Address</strong><a className="address-link" href={MAP_URL} target="_blank" rel="noreferrer">{COMPANY_ADDRESS}</a></p>
             </div>
             <div>
               <span className="contact-icon"><Mail size={20} /></span>
@@ -139,7 +140,7 @@ export default function Landing() {
       <footer>
         <Logo light />
         <div className="footer-company-details">
-          <span>{COMPANY_ADDRESS}</span>
+          <a className="footer-address-link" href={MAP_URL} target="_blank" rel="noreferrer">{COMPANY_ADDRESS}</a>
           <a href={`mailto:${ENQUIRY_EMAIL}`}>{ENQUIRY_EMAIL}</a>
         </div>
         <span>© 2026 CrossCheck. Secure • Reliable • Professional</span>
