@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -10,6 +11,8 @@ import {
   CheckCircle2,
   MapPin,
   Mail,
+  Menu,
+  X,
 } from 'lucide-react';
 import Logo from '../components/Logo';
 
@@ -26,17 +29,31 @@ const features = [
 ];
 
 export default function Landing() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <div className="landing">
-      <header className="landing-nav">
+      <header className={`landing-nav ${menuOpen ? 'menu-open' : ''}`}>
         <Logo />
-        <nav aria-label="Primary navigation">
-          <a href="#features">Features</a>
-          <a href="#how">How It Works</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+        <nav aria-label="Primary navigation" className={menuOpen ? 'open' : ''}>
+          <a href="#features" onClick={closeMenu}>Features</a>
+          <a href="#how" onClick={closeMenu}>How It Works</a>
+          <a href="#about" onClick={closeMenu}>About Us</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <Link className="mobile-login-link" to="/login" onClick={closeMenu}>Login</Link>
+          <a className="mobile-demo-link" href="#contact" onClick={closeMenu}>Request Demo</a>
         </nav>
-        <div>
+        <div className="desktop-nav-actions">
           <Link className="btn secondary" to="/login">Login</Link>
           <a className="btn" href="#contact">Request Demo</a>
         </div>
