@@ -17,34 +17,34 @@ export default function Register(){
  const update=e=>setForm({...form,[e.target.name]:e.target.value});
  const submit=async e=>{
   e.preventDefault();setError('');
-  if(form.name.trim().length<2)return setError('Please enter a valid full name.');
-  if(form.password.length<8)return setError('Password must contain at least 8 characters.');
-  if(!/[A-Z]/.test(form.password)||!/[a-z]/.test(form.password)||!/[0-9]/.test(form.password))return setError('Password must include uppercase, lowercase and a number.');
-  if(form.password!==form.confirmPassword)return setError('Passwords do not match.');
+  if(form.name.trim().length<2)return setError('Please Enter A Valid Full Name.');
+  if(form.password.length<8)return setError('Password Must Contain At Least 8 Characters.');
+  if(!/[A-Z]/.test(form.password)||!/[a-z]/.test(form.password)||!/[0-9]/.test(form.password))return setError('Password Must Include Uppercase, Lowercase And A Number.');
+  if(form.password!==form.confirmPassword)return setError('Passwords Do Not Match.');
   setBusy(true);
   try{await register({name:form.name.trim(),email:form.email.trim(),role:form.role,password:form.password});navigate('/app');}
-  catch(err){setError(err.message?.replace(/^"|"$/g,'')||'Registration failed. Please try again.');}
+  catch(err){setError(err.message?.replace(/^"|"$/g,'')||'Registration Failed. Please Try Again.');}
   finally{setBusy(false);}
  };
  return <div className="auth-page">
   <div className="auth-brand">
    <Logo light/>
-   <div><span className="eyebrow">CREATE YOUR WORKSPACE ACCESS</span><h1>Join CrossCheck.<br/>Build trusted teams.</h1><p>Register securely as an administrator, HR professional or recruiter and begin managing candidate verification.</p></div>
-   <div className="auth-points"><span><ShieldCheck/> Secure account creation</span><span><ShieldCheck/> Role-based workspace access</span><span><ShieldCheck/> Traceable user activity</span></div>
+   <div><span className="eyebrow">CREATE YOUR WORKSPACE ACCESS</span><h1>Join CrossCheck.<br/>Build Trusted Teams.</h1><p>Register Securely As An Administrator, HR Professional Or Recruiter And Begin Managing Candidate Verification.</p></div>
+   <div className="auth-points"><span><ShieldCheck/> Secure Account Creation</span><span><ShieldCheck/> Role-Based Workspace Access</span><span><ShieldCheck/> Traceable User Activity</span></div>
   </div>
   <div className="auth-panel register-panel">
    <form onSubmit={submit}>
-    <div className="auth-title-icon"><UserPlus/><div><h2>Create account</h2><p>Enter your details to register.</p></div></div>
+    <div className="auth-title-icon"><UserPlus/><div><h2>Create Account</h2><p>Enter Your Details To Register.</p></div></div>
     {error&&<div className="error">{error}</div>}
-    <label>Full name<input name="name" value={form.name} onChange={update} placeholder="Enter your full name" required maxLength="80"/></label>
-    <label>Email address<input name="email" value={form.email} onChange={update} type="email" placeholder="name@company.com" required maxLength="120"/></label>
-    <label>Register as<select name="role" value={form.role} onChange={update} required><option value="RECRUITER">Recruiter</option><option value="HR">HR</option><option value="ADMIN">Admin</option></select></label>
-    <label>Password<div className="password"><input name="password" value={form.password} onChange={update} type={show?'text':'password'} placeholder="Minimum 8 characters" required/><button type="button" aria-label="Show password" onClick={()=>setShow(!show)}>{show?<EyeOff/>:<Eye/>}</button></div></label>
-    <label>Confirm password<div className="password"><input name="confirmPassword" value={form.confirmPassword} onChange={update} type={showConfirm?'text':'password'} placeholder="Re-enter your password" required/><button type="button" aria-label="Show confirm password" onClick={()=>setShowConfirm(!showConfirm)}>{showConfirm?<EyeOff/>:<Eye/>}</button></div></label>
-    <small className="password-help">Use uppercase, lowercase and a number.</small>
-    <button className="btn full" disabled={busy}>{busy?'Creating account…':'Create Account'}</button>
-    <div className="auth-switch">Already registered? <Link to="/login">Login here</Link></div>
-    <Link className="back" to="/">← Back to home</Link>
+    <label>Full Name<input name="name" value={form.name} onChange={update} placeholder="Enter Your Full Name" required maxLength="80"/></label>
+    <label>Email Address<input name="email" value={form.email} onChange={update} type="email" placeholder="name@company.com" required maxLength="120"/></label>
+    <label>Register As<select name="role" value={form.role} onChange={update} required><option value="RECRUITER">Recruiter</option><option value="HR">HR</option><option value="ADMIN">Admin</option></select></label>
+    <label>Password<div className="password"><input name="password" value={form.password} onChange={update} type={show?'text':'password'} placeholder="Minimum 8 Characters" required/><button type="button" aria-label="Show Password" onClick={()=>setShow(!show)}>{show?<EyeOff/>:<Eye/>}</button></div></label>
+    <label>Confirm Password<div className="password"><input name="confirmPassword" value={form.confirmPassword} onChange={update} type={showConfirm?'text':'password'} placeholder="Re-Enter Your Password" required/><button type="button" aria-label="Show Confirm Password" onClick={()=>setShowConfirm(!showConfirm)}>{showConfirm?<EyeOff/>:<Eye/>}</button></div></label>
+    <small className="password-help">Use Uppercase, Lowercase And A Number.</small>
+    <button className="btn full" disabled={busy}>{busy?'Creating Account…':'Create Account'}</button>
+    <div className="auth-switch">Already Registered? <Link to="/login">Login Here</Link></div>
+    <Link className="back" to="/">← Back To Home</Link>
    </form>
   </div>
  </div>;

@@ -20,12 +20,12 @@ const COMPANY_ADDRESS = 'GoSpaze - Building No- 1314, 1st, 3rd & 4th Floor, Para
 const ENQUIRY_EMAIL = 'HR@cross-check.in';
 
 const features = [
-  [Users, 'Offer Intelligence', 'Detect multiple active offers and track offer history.'],
-  [ShieldCheck, 'Employment Verification', 'Verify current and previous employment records.'],
-  [BrainCircuit, 'AI Hiring Risk', 'Calculate a transparent 0–100 hiring risk score.'],
-  [SearchCheck, 'Duplicate Detection', 'Identify matching email, mobile and resume records.'],
-  [FileCheck2, 'Document Verification', 'Manage identity, education and employment documents.'],
-  [ChartNoAxesCombined, 'Reports & Analytics', 'Generate decision-ready candidate verification reports.'],
+  [Users, 'Offer Intelligence', 'Detect Multiple Active Offers And Track Offer History.'],
+  [ShieldCheck, 'Employment Verification', 'Verify Current And Previous Employment Records.'],
+  [BrainCircuit, 'AI Hiring Risk', 'Calculate A Transparent 0–100 Hiring Risk Score.'],
+  [SearchCheck, 'Duplicate Detection', 'Identify Matching Email, Mobile And Resume Records.'],
+  [FileCheck2, 'Document Verification', 'Manage Identity, Education And Employment Documents.'],
+  [ChartNoAxesCombined, 'Reports & Analytics', 'Generate Decision-Ready Candidate Verification Reports.'],
 ];
 
 export default function Landing() {
@@ -39,13 +39,13 @@ export default function Landing() {
         <button
           className="mobile-menu-toggle"
           type="button"
-          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-label={menuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <nav aria-label="Primary navigation" className={menuOpen ? 'open' : ''}>
+        <nav aria-label="Primary Navigation" className={menuOpen ? 'open' : ''}>
           <a href="#features" onClick={closeMenu}>Features</a>
           <a href="#how" onClick={closeMenu}>How It Works</a>
           <a href="#about" onClick={closeMenu}>About Us</a>
