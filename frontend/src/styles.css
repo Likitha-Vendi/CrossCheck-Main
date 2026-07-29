@@ -318,3 +318,20 @@
   .candidate-form-sections a{font-size:11px}
   .name-risk-row h1{font-size:22px}
 }
+
+/* Mobile header alignment fix: brand stays left, menu stays right */
+@media (max-width:760px){
+  .landing-nav > .logo{
+    margin-left:0 !important;
+    margin-right:0 !important;
+    justify-self:start;
+    justify-content:flex-start;
+    width:auto;
+    max-width:calc(100% - 58px);
+  }
+  .landing-nav > .mobile-menu-toggle{
+    margin-left:0 !important;
+    margin-right:0 !important;
+    justify-self:end;
+  }
+}
