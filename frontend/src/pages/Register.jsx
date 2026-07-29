@@ -38,18 +38,7 @@ export default function Register(){
     {error&&<div className="error">{error}</div>}
     <label>Full name<input name="name" value={form.name} onChange={update} placeholder="Enter your full name" required maxLength="80"/></label>
     <label>Email address<input name="email" value={form.email} onChange={update} type="email" placeholder="name@company.com" required maxLength="120"/></label>
-    <label>
-  Register as
-  <select
-    name="role"
-    value={form.role}
-    onChange={update}
-    required
-  >
-    <option value="RECRUITER">Recruiter</option>
-    <option value="HR">HR</option>
-  </select>
-</label>
+    <label>Register as<select name="role" value={form.role} onChange={update} required><option value="RECRUITER">Recruiter</option><option value="HR">HR</option><option value="ADMIN">Admin</option></select></label>
     <label>Password<div className="password"><input name="password" value={form.password} onChange={update} type={show?'text':'password'} placeholder="Minimum 8 characters" required/><button type="button" aria-label="Show password" onClick={()=>setShow(!show)}>{show?<EyeOff/>:<Eye/>}</button></div></label>
     <label>Confirm password<div className="password"><input name="confirmPassword" value={form.confirmPassword} onChange={update} type={showConfirm?'text':'password'} placeholder="Re-enter your password" required/><button type="button" aria-label="Show confirm password" onClick={()=>setShowConfirm(!showConfirm)}>{showConfirm?<EyeOff/>:<Eye/>}</button></div></label>
     <small className="password-help">Use uppercase, lowercase and a number.</small>

@@ -259,3 +259,62 @@
   .hero-visual{min-height:350px}
   .hero-visual .float-card{font-size:9px}
 }
+
+/* Mobile typography refinement: smaller, cleaner text without changing desktop */
+@media (max-width:760px){
+  body{font-size:14px}
+  h1{font-size:clamp(25px,7.5vw,34px)}
+  h2{font-size:clamp(20px,6vw,27px)}
+  h3{font-size:15px}
+  p{font-size:14px;line-height:1.55}
+  .landing-nav nav a{font-size:13px;min-height:40px;padding:8px 11px}
+  .hero .eyebrow{font-size:10px}
+  .hero h1{font-size:clamp(32px,9.5vw,43px);line-height:1.08}
+  .hero>div>p{font-size:15px;line-height:1.55}
+  .hero-actions .btn{font-size:14px;min-height:48px}
+  .trusted small,.trusted b{font-size:12px}
+  .section-head span,.cta span{font-size:10px}
+  .section-head p,.cta p{font-size:14px}
+  .feature-grid article h3{font-size:15px}
+  .feature-grid article p{font-size:11px}
+  .contact h2,.page-title h1{font-size:24px}
+  .contact p,.page-title p{font-size:12px}
+  label{font-size:12px}
+  input,select,textarea,.toolbar input,.toolbar select{font-size:13px}
+  .btn{font-size:13px;padding:10px 16px}
+  .sidebar nav a,.logout{font-size:12px}
+  .topbar h3{font-size:14px}
+  .topbar p{font-size:10px}
+  .user-chip b,.user-chip small{font-size:11px}
+  th,td{font-size:11px}
+  .stats-grid h2{font-size:22px}
+  .stats-grid p,.stats-grid small{font-size:10px}
+  .panel-title,.panel h3{font-size:15px}
+  .profile-tabs button{font-size:12px}
+  .name-risk-row h1{font-size:24px}
+  .review-profile-main h3{font-size:14px}
+  .contact-lines{font-size:11px}
+  .joining-number{font-size:32px}
+  .report-title h2{font-size:20px}
+  .report-check b{font-size:12px}
+  .report-check small,.ai-recommendation p{font-size:10px}
+}
+
+@media (max-width:420px){
+  body{font-size:13px}
+  .landing-nav .logo b{font-size:18px}
+  .landing-nav nav a{font-size:12px}
+  .hero h1{font-size:clamp(30px,9.2vw,38px);letter-spacing:-1px}
+  .hero>div>p{font-size:14px}
+  .hero-actions .btn{font-size:13px;min-height:46px}
+  .trusted small,.trusted b{font-size:11px}
+  .hero-visual .float-card{font-size:9px}
+  .section{padding-top:48px;padding-bottom:48px}
+  .page-title h1,.contact h2{font-size:22px}
+  .auth-brand h1{font-size:34px}
+  .auth-brand p{font-size:13px}
+  .auth-panel form,.simple-auth form{padding:24px 20px}
+  .candidate-form{font-size:13px}
+  .candidate-form-sections a{font-size:11px}
+  .name-risk-row h1{font-size:22px}
+}
